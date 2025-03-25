@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section >
+        <fieldset>
+        <form action="https://formspree.io/f/xdkedlwa" method="POST" target="_blank">
+                <label for="nombre"> nombre: </label>
+                <input type="text" id="nombre" name="nombre"> <br>
+                <label for="apellido"> apellido: </label>
+                <input type="text" id="apellido" name="apellido"> <br>
+                <label for="nacimiento"> Fecha de nacimiento: </label>
+                <input type="date" name="nacimiento" id="nacimiento"> <br>
+                <label for="edad"> Edad: </label>
+                <input type="number" name="edad" id="edad"> <br>
+            
+        </fieldset>
+        <fieldset>
+            <label for="genero"> Genero</label>
+            <input type="checkbox" name="genero" value="m"> M
+            <input type="checkbox" name="genero" value="f"> F
+            <input type="checkbox" name="genero" value="otro"> OTRO <br>
+
+            <label for="area"> Area a desarrollarse</label> <br>
+            <input type="radio" name="area" id="area"> App web <br>
+            <input type="radio" name="area" id="area"> Análisis de datos <br>
+            <input type="radio" name="area" id="area"> Desarrollo de juegos <br>
+            <label for="lenguaje"> Selecione lenguaje: </label>
+            <select name="lenguaje">
+                <option value="html"> html</option>
+                <option value="css"> css </option>
+                <option value="java"> java</option>
+            </select> <br>
+            <label for="navegador">Seleccione navegador</label>
+            <select name="navegador" id="navegador">
+                <option value="chrome"> chrome</option>
+                <option value="opera"> opera </option>
+                <option value="firefox"> firefox </option>
+                <option value="safari"> safari </option>
+                <option value="edge"> edge </option>
+
+
+
+            </select>
+
+        </fieldset>
+        <fieldset>
+            <legend> Datos personales </legend>
+            <label for="numero"> Numero de telefono</label> 
+            <input type="number" name="numero" id="numero"> <br>
+            <label for="archivo"> Seleccione archivo </label> 
+            <input type="file" name="archivo" id="archivo"> <br>
+            consulta:
+            <textarea name="comentario" id="comentario" rows="10" placeholder="Deja un comentario"> deja un comentario...</textarea> <br>
+            <input type="submit" value="enviar"> <input type="reset" value="borrar">
+        </fieldset>
+        </form>
+
+
+    </section>
+</body>
+
+</html>
