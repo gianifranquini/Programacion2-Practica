@@ -1,0 +1,55 @@
+from flask import Flask, redirect, request, url_for, abort
+
+app = Flask(__name__)
+print("hola")
+
+@app.route('/')
+def home():
+    return " Hola ␣ Mundo ␣ desde ␣ Flask !"
+#ejercicio 2
+@app.route('/inicio')
+def inicio():
+    return " Esta es la pagina de inicio !"
+@app.route('/acercadenosotros')
+def nosotros():
+    return " acerca de nosotros !"
+#ejercicio 3
+@app.route('/usuario/<nombre>')
+def usuario(nombre):
+    return 'nombre: '+ nombre
+#ejercicio 4
+
+@app.route('/login', methods =[ 'GET', 'POST'])
+def login () :
+    if request.method == 'POST':
+        usuario = request.form['usuario']
+        return " Bienvenido,␣" + usuario + "!"
+    else :
+        return '''
+            <form method="post" >
+                Usuario: <input type="text" name="usuario" >
+                <input type="submit" value="Iniciar Sesion" >
+            </form >
+        '''
+#ejercicio 5
+@app.route('/ir-login')
+def ir_login():
+    return redirect(url_for('login'))
+
+#ejercicio 6
+
+@app.errorhandler(404)
+def pagina_no_encontrada(e):
+    return 'Error pagina no encontrada', 404
+
+#ejercicio 7
+@app.route('/get', methods=['GET'])
+def get():
+    if request.method =='GET':
+        return 'Solo se acepta el metodo GET'
+    else : 
+        return "metodo no permitido" , 405
+#ejercicio 8 
+
+
+app.run( debug = True )
